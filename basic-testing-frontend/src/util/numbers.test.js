@@ -35,7 +35,10 @@ describe("cleanNumbers", () => {
   it("should return an array if number valus if an array string number is provided", () => {
     const numbers = ["1", "2"];
     const result = cleanNumbers(numbers);
-    expect(result[0]).toBeTypeOf("number");
+    //expect(result[0]).toBeTypeOf("number");
+
+    //if you want to compare it to an array you have to use toEqual
+    expect(result).toEqual([1, 2]);
   });
   it("should throw an error if an array with at least one empty string is provided", () => {
     const numberValues = ["", 1];
